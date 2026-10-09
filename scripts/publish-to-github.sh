@@ -20,7 +20,7 @@ if git remote get-url origin >/dev/null 2>&1; then
 else
   "$GH" repo create "$REPO_NAME" \
     --public \
-    --description "Vantrue Pilot 2 one-page PDF flyer ($549.99 + $100 install)" \
+    --description 'Vantrue Pilot 2 one-page PDF flyer ($549.99 + $100 install)' \
     --source=. \
     --remote=origin \
     --push
