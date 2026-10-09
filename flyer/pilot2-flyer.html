@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vantrue Pilot 2 — Flyer</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      width: 8.5in;
+      height: 11in;
+      overflow: hidden;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    .page {
+      width: 8.5in;
+      height: 11in;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f1419 0%, #1e2a38 55%, #2d3e50 100%);
+      color: #fff;
+      padding: 0.45in 0.55in 0.35in;
+      flex-shrink: 0;
+    }
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.2in;
+    }
+    .logo {
+      height: 0.42in;
+      width: auto;
+    }
+    .badge {
+      background: #ff6b00;
+      color: #fff;
+      font-weight: 700;
+      font-size: 10pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+    .hero h1 {
+      font-size: 28pt;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span {
+      color: #ff8c3a;
+    }
+    .tagline {
+      margin-top: 8px;
+      font-size: 11.5pt;
+      color: #c8d4e0;
+      max-width: 5.2in;
+      line-height: 1.35;
+    }
+    .main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0.35in;
+      padding: 0.35in 0.55in 0.25in;
+    }
+    .product-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .features h2 {
+      font-size: 13pt;
+      color: #ff6b00;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    .features ul {
+      list-style: none;
+      font-size: 10.5pt;
+      line-height: 1.45;
+    }
+    .features li {
+      padding: 5px 0 5px 22px;
+      position: relative;
+    }
+    .features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ff6b00;
+      font-weight: 700;
+    }
+    .spec-strip {
+      background: #f4f6f8;
+      margin: 0 0.55in;
+      padding: 14px 18px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      font-size: 9pt;
+    }
+    .spec-strip strong {
+      display: block;
+      font-size: 11pt;
+      color: #0f1419;
+    }
+    .pricing {
+      margin: 0.28in 0.55in 0;
+      border: 3px solid #ff6b00;
+      border-radius: 10px;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .price-block .label {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #666;
+    }
+    .price-block .amount {
+      font-size: 26pt;
+      font-weight: 800;
+      color: #0f1419;
+      line-height: 1.1;
+    }
+    .price-block .was {
+      font-size: 10pt;
+      color: #888;
+      text-decoration: line-through;
+    }
+    .install {
+      text-align: center;
+      padding-left: 16px;
+      border-left: 2px solid #eee;
+    }
+    .install .fee {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #ff6b00;
+    }
+    .total {
+      text-align: right;
+      min-width: 1.6in;
+    }
+    .total .sum {
+      font-size: 20pt;
+      font-weight: 800;
+    }
+    .cta {
+      margin: 0.22in 0.55in 0;
+      background: #0f1419;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-size: 12pt;
+      font-weight: 600;
+    }
+    .cta strong {
+      color: #ff8c3a;
+    }
+    .footer {
+      margin-top: auto;
+      padding: 0.2in 0.55in 0.35in;
+      font-size: 8.5pt;
+      color: #777;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-top">
+        <img class="logo" src="assets/vantrue-logo.png" alt="Vantrue" />
+        <span class="badge">Limited Time Offer</span>
+      </div>
+      <h1>Vantrue <span>Pilot 2</span></h1>
+      <p class="tagline">4-channel thermal smart dash cam — 2K video, 360° night vision, CarPlay &amp; Android Auto, and AI-powered safety in one system.</p>
+    </header>
+
+    <div class="main">
+      <div class="visual">
+        <img class="product-img" src="assets/pilot2.jpg" alt="Vantrue Pilot 2 dash cam system" />
+      </div>
+      <div class="features">
+        <h2>Why Pilot 2</h2>
+        <ul>
+          <li><strong>World-first thermal imaging</strong> dash cam for clearer detection day and night</li>
+          <li><strong>4 channels</strong> — 1440P + 1080P + 1440P + thermal lens (360° coverage)</li>
+          <li><strong>6.25″ IPS display</strong> with Apple CarPlay &amp; Android Auto</li>
+          <li><strong>24/7 parking mode</strong> with G-sensor impact detection</li>
+          <li><strong>AI safety features</strong> — smart alerts when you need them most</li>
+          <li>Professional <strong>installation available</strong> — clean wiring, hidden cables, full setup</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="spec-strip">
+      <div><strong>2K + Thermal</strong>Multi-lens recording</div>
+      <div><strong>360°</strong>All-around protection</div>
+      <div><strong>CarPlay</strong>Smart cockpit display</div>
+      <div><strong>24/7</strong>Parking surveillance</div>
+    </div>
+
+    <div class="pricing">
+      <div class="price-block">
+        <div class="label">Pilot 2 system</div>
+        <div class="was">Regular $649.99</div>
+        <div class="amount">$549.99</div>
+      </div>
+      <div class="install">
+        <div class="label">Professional install</div>
+        <div class="fee">+$100</div>
+      </div>
+      <div class="total">
+        <div class="label">Drive-away total</div>
+        <div class="sum">$649.99</div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <strong>Book your install today</strong> — thermal vision, full 4-channel coverage, and expert setup in one visit.
+    </div>
+
+    <footer class="footer">
+      Vantrue Pilot 2 · P2 Thermal System · Prices in USD · Product &amp; specs per vantrue.com · Installation fee covers professional mounting, power routing, and system configuration.
+    </footer>
+  </div>
+</body>
+</html>
